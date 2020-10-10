@@ -7,4 +7,4 @@ GOPATH    ?= $(HOME)/go
 export GOFLAGS
 
 run:
-	$(GO) run src/main.go
+	$(GO) run main/main.go
