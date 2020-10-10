@@ -1,1 +1,12 @@
-= WIP
+= LQ Game
+
+@todo
+
+== Run
+
+[source,bash]
+----
+make run
+----
+
+@todo
