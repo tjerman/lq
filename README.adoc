@@ -9,4 +9,22 @@
 make run
 ----
 
-@todo
+== ENV variables
+
+=== Debugging
+
+DEBUG_GRID::
+    Specifies if we should show the game grid.
+
+DEBUG_OBJECT_LABELS::
+    Specifies if we should show the game object labels.
+
+DEBUG_ROOM_STRUCTURE::
+    Specifies if we should show room debugging bits.
+
+DEBUG_CORRIDOR_STRUCTURE::
+    Specifies if we should show corridor debugging bits.
+
+DEBUG_FIXED_WORLD::
+    Specifies if we should render a constant level for debugging purposes.
+    If not set, the game will use the random world builder.

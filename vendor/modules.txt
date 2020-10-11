@@ -1,3 +1,6 @@
+# github.com/davecgh/go-spew v1.1.1
+## explicit
+github.com/davecgh/go-spew/spew
 # github.com/go-gl/glfw/v3.3/glfw v0.0.0-20200707082815-5321531c36a2
 github.com/go-gl/glfw/v3.3/glfw
 github.com/go-gl/glfw/v3.3/glfw/glfw/deps
@@ -71,3 +74,7 @@ golang.org/x/mobile/internal/mobileinit
 ## explicit
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/windows
+# gopkg.in/yaml.v2 v2.3.0
+## explicit
+# gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
+## explicit
