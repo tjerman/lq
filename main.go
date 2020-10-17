@@ -56,4 +56,8 @@ func env(c *game.GameConfig) {
 	if os.Getenv("DEBUG_FIXED_WORLD") == "1" {
 		c.DebugFixedWorld = true
 	}
+
+	if os.Getenv("DEBUG_INPUT_CONTROLLS") == "1" {
+		c.DebugInputControlls = true
+	}
 }

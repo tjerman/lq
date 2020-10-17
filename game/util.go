@@ -39,3 +39,35 @@ func drawGrid(s *ebiten.Image, g *Game) {
 		s.DrawImage(b, op)
 	}
 }
+
+func drawInputControlls(s *ebiten.Image, g *Game) {
+	dwW := 200
+	dwH := 50
+
+	// Draw the debug text
+	b, _ := ebiten.NewImage(dwW, dwH, ebiten.FilterDefault)
+	b.Fill(color.RGBA{0x18, 0x18, 0x18, 0xA0})
+	ebitenutil.DebugPrint(b, fmt.Sprintf("[mouse pos] %s", g.InState))
+	op := &ebiten.DrawImageOptions{}
+	op.GeoM.Translate(float64(g.Config.SizeX-dwW), float64(g.Config.SizeY-dwH))
+	s.DrawImage(b, op)
+
+	// Draw focused tile
+	c := g.Config
+	in := g.InState
+
+	b, _ = ebiten.NewImage(c.TileSize, c.TileSize, ebiten.FilterDefault)
+	b.Fill(color.RGBA{0x18, 0x18, 0x18, 0xA0})
+	op = &ebiten.DrawImageOptions{}
+	op.GeoM.Translate(float64(in.FocusedTile[0]*c.TileSize), float64(in.FocusedTile[1]*c.TileSize))
+	s.DrawImage(b, op)
+
+	// Draw the active tile
+	if in.ActiveTile[0] >= 0 {
+		b, _ = ebiten.NewImage(c.TileSize, c.TileSize, ebiten.FilterDefault)
+		b.Fill(color.RGBA{0x05, 0x18, 0x05, 0xA0})
+		op = &ebiten.DrawImageOptions{}
+		op.GeoM.Translate(float64(in.ActiveTile[0]*c.TileSize), float64(in.ActiveTile[1]*c.TileSize))
+		s.DrawImage(b, op)
+	}
+}
